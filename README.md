@@ -1,6 +1,6 @@
 <p align="center">
     <!-- title -->
-    <h1 align="center"><img src="./assets/icon.png" alt="Reasoning Gym Logo" style="vertical-align: bottom; width: 54px; height: 40px;"> Reasoning Gym</h1>
+    <h1 align="center"><img src="./assets/icon.png" alt="Reasoning Gym Logo" style="vertical-align: bottom; width: 54px; height: 40px;"> Reasoning Gym </br> <small>Reasoning Environments for Reinforcement Learning with Verifiable Rewards </small></h1>
     <!-- teaser -->
     <p align="center">
         <img src="./assets/examples.png" width="800px">
