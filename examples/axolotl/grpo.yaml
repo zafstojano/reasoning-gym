@@ -1,0 +1,67 @@
+base_model: Qwen/Qwen2.5-1.5B-Instruct
+# Automatically upload checkpoint and final model to HF
+# hub_model_id: username/custom_model_name
+
+load_in_8bit: false
+load_in_4bit: false
+strict: false
+
+torch_compile: true
+
+rl: grpo
+trl:
+  beta: 0.001
+  max_completion_length: 512
+  use_vllm: true
+  reward_funcs:
+    - grpo.correctness_reward_func
+  vllm_gpu_memory_utilization: 0.9
+  vllm_max_model_len: 800
+  num_generations: 16
+
+chat_template: qwen_25
+datasets:
+  - path: zafstojano/sample-rg-data
+    type: grpo.axo_rg_transform
+dataset_prepared_path: /workspace/data/last_run_prepared
+skip_prepare_dataset: true
+val_set_size: 0.0
+output_dir: /workspace/data/axolotl-artifacts/r1-outputs
+
+dataloader_prefetch_factor: 32
+dataloader_num_workers: 2
+dataloader_pin_memory: true
+
+gc_steps: 1
+
+sequence_len: 800
+sample_packing: false
+eval_sample_packing: false
+pad_to_sequence_len: false
+
+wandb_project: rg-grpo-r1
+wandb_entity:
+wandb_name:
+
+gradient_accumulation_steps: 8
+micro_batch_size: 16  # should match num_generations / num_gpus
+num_epochs: 1
+
+optimizer: adamw_torch_fused
+lr_scheduler: constant_with_warmup
+learning_rate: 1.0e-6
+max_grad_norm: 1.0
+weight_decay: 0.1
+
+bf16: true
+tf32: true
+
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+flash_attention: true
+
+logging_steps: 1
+warmup_steps: 100
+evals_per_epoch: 1
+saves_per_epoch: 4
