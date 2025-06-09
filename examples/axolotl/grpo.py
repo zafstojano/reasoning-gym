@@ -9,7 +9,7 @@ def axo_rg_transform(cfg, *args, **kwargs):
     def transform_fn(example, tokenizer=None):
         return {
             "prompt": [
-                {"role": "user", "content": SYSTEM_PROMPT + "\n\n" + example["text"]},
+                {"role": "user", "content": SYSTEM_PROMPT + "\n\n" + example["question"]},
             ],
             "answer": example["answer"],
             "metadata": example["metadata"],

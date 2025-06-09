@@ -8,15 +8,23 @@ strict: false
 
 torch_compile: true
 
+vllm:
+  host: 0.0.0.0
+  port: 8000
+  tensor_parallel_size: 1
+  gpu_memory_utilization: 0.9
+  dtype: auto
+  max_model_len: 2048
+
 rl: grpo
 trl:
-  beta: 0.001
-  max_completion_length: 512
   use_vllm: true
+  vllm_server_host: 0.0.0.0
+  vllm_server_port: 8000
+  vllm_server_timeout: 300
+  beta: 0.001
   reward_funcs:
     - grpo.correctness_reward_func
-  vllm_gpu_memory_utilization: 0.9
-  vllm_max_model_len: 800
   num_generations: 16
 
 chat_template: qwen_25
