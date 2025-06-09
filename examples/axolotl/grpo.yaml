@@ -29,7 +29,7 @@ trl:
 
 chat_template: qwen_25
 datasets:
-  - path: zafstojano/sample-rg-data
+  - path: zafstojano/sample-rg-data # Replace with your data source
     type: grpo.axo_rg_transform
 dataset_prepared_path: /workspace/data/last_run_prepared
 skip_prepare_dataset: true
