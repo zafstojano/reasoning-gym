@@ -6,13 +6,22 @@
         <img src="https://github.com/open-thought/reasoning-gym/raw/main/assets/examples.png" width="800px">
     </p>
     <!-- badges -->
-    <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-        <a href="https://arxiv.org/abs/2505.24760" target="_blank" style="text-decoration: none;">
-        <img src="https://img.shields.io/badge/arXiv-2505.24760-b31b1b.svg?style=for-the-badge" alt="Paper PDF">
+   <div style="text-align: center;">
+    <span style="display: inline-block;">
+        <a href="https://arxiv.org/abs/2505.24760" target="_blank" 
+        style="text-decoration: none !important; color: inherit; display: inline-block;">
+        <img src="https://img.shields.io/badge/arXiv-2505.24760-b31b1b.svg?style=for-the-badge" 
+            alt="Paper PDF" style="display: block; margin: 0;">
         </a>
-        <a href="https://discord.gg/gpumode" target="_blank" style="text-decoration: none;">
-        <img src="https://dcbadge.limes.pink/api/server/gpumode?style=for-the-badge" alt="Discord Server">
+    </span>
+    <span style="display: inline-block; width: 10px;"></span>
+    <span style="display: inline-block;">
+        <a href="https://discord.gg/gpumode" target="_blank" 
+        style="text-decoration: none !important; color: inherit; display: inline-block;">
+        <img src="https://dcbadge.limes.pink/api/server/gpumode?style=for-the-badge" 
+            alt="Discord Server" style="display: block; margin: 0;">
         </a>
+    </span>
     </div>
 </p>
 
