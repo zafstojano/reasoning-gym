@@ -9,8 +9,8 @@
     <p align="center">
         <a href="https://arxiv.org/abs/2505.24760" target="_blank" style="text-decoration: none; display: inline-block;">
             <img src="https://img.shields.io/badge/arXiv-2505.24760-b31b1b.svg?style=for-the-badge" alt="Paper PDF" style="margin-right: 10px;">
-        </a>
-        <a href="https://discord.gg/gpumode" target="_blank" style="text-decoration: none; display: inline-block;">
+        </a><!--
+        --><a href="https://discord.gg/gpumode" target="_blank" style="text-decoration: none; display: inline-block;">
             <img src="https://dcbadge.limes.pink/api/server/gpumode?style=for-the-badge" alt="Discord Server">
         </a>
     </p>
